@@ -1,6 +1,8 @@
-package com.example.myapplication
+ package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,13 +13,13 @@ class MainActivity : AppCompatActivity() {
 
         val lockBut: ImageButton = findViewById(R.id.LockBut)
         val camBut: ImageButton = findViewById(R.id.CameraBut)
+        val CamButFrag: Button = findViewById(R.id.CamButFrag)
         val camfragvar = camfrag()
         val lockfragvar = lockfrag()
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.GenFragment, camfragvar)
             commit()
         }
-
         lockBut.setOnClickListener() {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.GenFragment, lockfragvar)
@@ -28,10 +30,12 @@ class MainActivity : AppCompatActivity() {
                     replace(R.id.GenFragment, camfragvar)
                     commit()
                 }
-                /*findViewById<Button>(R.id.CamButFrag).setOnClickListener {
+                findViewById<Button>(R.id.CamButFrag).setOnClickListener {
                     val intent = Intent(this, Video::class.java)
-                    startActivity(intent)*/
+                    startActivity(intent)
                 }
             }
         }
     }
+}
+

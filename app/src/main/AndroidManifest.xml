@@ -9,20 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Video" />
         <activity
             android:name=".MySignOff"
             android:label="@string/title_activity_my_sign_off"
             android:theme="@style/Theme.MyApplication.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".MySignOff"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MySignOff" />
+        </activity>
+        <activity android:name=".Video"
+            android:parentActivityName=".MySignOff"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MySignOff" />
+        </activity>
     </application>
 
 </manifest>
