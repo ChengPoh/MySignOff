@@ -1,6 +1,5 @@
  package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -16,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         val CamButFrag: Button = findViewById(R.id.CamButFrag)
         val camfragvar = camfrag()
         val lockfragvar = lockfrag()
+        val vidfragvar = vidfrag()
+
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.GenFragment, camfragvar)
             commit()
@@ -30,9 +31,11 @@ class MainActivity : AppCompatActivity() {
                     replace(R.id.GenFragment, camfragvar)
                     commit()
                 }
-                findViewById<Button>(R.id.CamButFrag).setOnClickListener {
-                    val intent = Intent(this, Video::class.java)
-                    startActivity(intent)
+                CamButFrag.setOnClickListener() {
+                    supportFragmentManager.beginTransaction().apply {
+                        replace(R.id.GenFragment, vidfragvar)
+                        commit()
+                    }
                 }
             }
         }
