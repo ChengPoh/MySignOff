@@ -1,7 +1,6 @@
  package com.example.myapplication
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
@@ -12,10 +11,8 @@ class MainActivity : AppCompatActivity() {
 
         val lockBut: ImageButton = findViewById(R.id.LockBut)
         val camBut: ImageButton = findViewById(R.id.CameraBut)
-        val CamButFrag: Button = findViewById(R.id.CamButFrag)
         val camfragvar = camfrag()
         val lockfragvar = lockfrag()
-        val vidfragvar = vidfrag()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.GenFragment, camfragvar)
@@ -30,13 +27,8 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.beginTransaction().apply {
                     replace(R.id.GenFragment, camfragvar)
                     commit()
-                }
-                CamButFrag.setOnClickListener() {
-                    supportFragmentManager.beginTransaction().apply {
-                        replace(R.id.GenFragment, vidfragvar)
-                        commit()
                     }
-                }
+                // Adding more replace Fragment lines seems to crash the app for some reason (23 Nov 2020)
             }
         }
     }

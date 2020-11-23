@@ -3,13 +3,12 @@
     package="com.example.myapplication">
 
     <application
-        android:allowBackup="true"
-        android:fullBackupContent=""
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyApplication">
+        android:theme="@style/Theme.MyApplication"
+        android:fullBackupContent="true">
         <activity
             android:name=".MySignOff"
             android:label="@string/title_activity_my_sign_off"
@@ -19,12 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:parentActivityName=".MySignOff"
             android:theme="@style/Theme.MyApplication.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MySignOff" />
         </activity>
     </application>
 
