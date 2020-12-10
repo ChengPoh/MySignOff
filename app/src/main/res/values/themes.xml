@@ -17,9 +17,12 @@
     <style name="Theme.MyApplication.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:actionBarSize">0dp</item>
+        <item name="android:windowTitleSize">0dp</item>
+
     </style>
 
-    <style name="Theme.MyApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.MyApplication.AppBarOverlay" parent="Theme.MyApplication.NoActionBar" />
 
-    <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.MyApplication.PopupOverlay" parent="Theme.MyApplication.NoActionBar" />
 </resources>
