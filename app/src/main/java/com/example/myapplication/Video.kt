@@ -11,6 +11,6 @@ class Video : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val webview = WebView(this)
         setContentView(webview)
-        webview.loadUrl("https://8.8.8.8")
+        webview.loadUrl("https://www.google.com")
     }
 }
