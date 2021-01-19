@@ -23,15 +23,5 @@ class lockfrag : Fragment(R.layout.fragment_lockfrag) {
         }
         return view
     }
-    /* override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        LockButton.setOnClickListener { view ->
-            Snackbar.make(view, "My SignOff Locked!", Snackbar.LENGTH_LONG)
-        }
-        UnlockButton.setOnClickListener { view ->
-            Snackbar.make(view, "My SignOff Unlocked!", Snackbar.LENGTH_LONG)
-        }
-    } */
 }
 
