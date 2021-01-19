@@ -18,12 +18,6 @@ import androidx.appcompat.app.AppCompatActivity
          val camBut: ImageButton = findViewById(R.id.CameraBut)
          val lockfragvar = lockfrag()
 
-         /*
-         val L1IPAdd: String = URL("https://script.google.com/macros/s/AKfycbyjRIRl2ca_pnfz8XgccjDlaRPUNz6KY_WcyPZAROsy9EZkD35F/exec?command=GetIPAddress").readText()
-         val getIP = "https://script.google.com/macros/s/AKfycbyjRIRl2ca_pnfz8XgccjDlaRPUNz6KY_WcyPZAROsy9EZkD35F/exec?command=GetIPAddress"
-         val getStatus = "https://script.google.com/macros/s/AKfycbyjRIRl2ca_pnfz8XgccjDlaRPUNz6KY_WcyPZAROsy9EZkD35F/exec?command=GetStatus"
-         */
-
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.GenFragment, lockfragvar)
             commit()
