@@ -16,12 +16,9 @@ import org.jsoup.nodes.Document
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_sign_off)
-
+        Toast.makeText(this@MySignOff,"Loading...", Toast.LENGTH_LONG).show()
 
         GlobalScope.launch {
-            runOnUiThread{
-                    Toast.makeText(this@MySignOff,"Loading...", Toast.LENGTH_LONG).show()
-            }
             val doc: Document = Jsoup.connect("https://script.google.com/macros/s/AKfycbwt1Xbo2u05gZPTPaIi4BB83zv9L_F__eHghFOa4C6-z8PFopVoEqxdzA/exec/exec?command=GetCamIPAddress").get()
             val ipadd: String = doc.toString()
             val index = ipadd.indexOf("CAM IP :")
