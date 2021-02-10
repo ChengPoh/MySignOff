@@ -10,7 +10,9 @@ class Video : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val webview = WebView(this)
+        val IPVal3: String = intent.getStringExtra("IPValT2").toString()
+        val IPfeed: String = IPVal3 + "/stream"
         setContentView(webview)
-        webview.loadUrl("https://www.google.com")
+        webview.loadUrl(IPfeed)
     }
 }
