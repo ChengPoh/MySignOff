@@ -20,22 +20,26 @@
             app:iconTint="#673AB7"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523" />
 
         <ImageButton
             android:id="@+id/CameraBut"
             android:layout_width="377dp"
             android:layout_height="64dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="327dp"
             android:contentDescription="@string/title_activity_camera"
             android:drawableTop="@drawable/ic_baseline_camera_alt_24"
             android:src="@drawable/ic_baseline_camera_alt_24"
+            app:layout_constraintBottom_toTopOf="@+id/lockButFrag"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.562"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:src="@drawable/ic_baseline_camera_alt_24" />
 
 
